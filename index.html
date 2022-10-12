@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <main class="main">
+            <div class="main__item">
+                <h1 class="main__title">Украшения собственного производства</h1>
+                <p class="main__text">Все изделия создаются с любовью для&nbspкаждого клиента</p>
+                <a href="#" class="link">Сделать расчет и заказ</a>
+            </div>
+            <div class="main__images"><img src="img/main.png" alt="" width="352">
+                <img src="img/main_min.png" alt="" width="300">
+            </div>
+        </main>
+        <section class="products">
+            <h2 class="title-h2">Наши изделия</h2>
+            <div class="grid">
+                <div class="grid__cover">
+                    <img src="img/products/1.jpg" alt="">
+                </div>
+                <div class="grid__cover">
+                    <img src="img/products/2.jpg" alt="">
+                </div>
+                <div class="grid__cover">
+                    <img src="img/products/3.jpg" alt="">
+                </div>
+                <div class="grid__cover">
+                    <img src="img/products/4.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <div class="cost">
+            <div class="cost__title">
+                <svg class="circle" wirth="200" height="200" viewBox="0 0 200 200">
+                    <path id="circleShape" class="circle__shape" d="M 20, 100 a 80, 80 0 1,1 160,0 a 80,80 0 1,1 -160,0" fill="none"></path>
+                    <path class="circle__arrow" d="M 75, 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" stroke="#2B2024" stroke-width="2"></path>
+                    <text class="circle__text">
+                        <textPath href="#circleShape">
+                            Рассчитать стоимость
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+            <div class="cost__calc">
+                <form class="form">
+                    <p class="form__text">Выберите изделие:</p>
+                    <select class="form__select" id="selectProduct">
+                        <option value="0" disabled selected>Выбрать из списка</option>
+                        <option value="1000">Кольцо граненое (1000 $)</option>
+                        <option value="1000">Кольцо с топазом (1000 $)</option>
+                        <option value="1000">Кольцо из микрочипов (1000 $)</option>
+                    </select>
+                    <p class="form__text">Укажите количество:</p>
+                    <input type="number" value="0" class="form__input" id="quantityProduct" min="0" required> 
+                    <button type="button" class="link" id="btnProduct">Рассчитать</button>
+                </form>
+                <div class="total" style="display: none" id="infoProduct">
+                    <p class="total__price">Итог: <span id="priceProduct"></span></p>
+                    <p class="total__info">Оставьте заявку на почту <a href="mailto:box@inbox.ru" class="total__email">box@inbox.ru</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
